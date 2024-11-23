@@ -49,7 +49,12 @@ function addToOrder(itemName) {
   orderListing.textContent = itemName.innerText;
   // Append the list item to the order items list
   orderList.appendChild(orderListing);
+  //Get element from HTML to display and calculate the total cost
+  let orderTotal = document.getElementById("order-total");
   // Calculate and update the total price
+  let itemPrice = 60;
+  let currentTotal = parseFloat(orderTotal.textContent);
+  currentTotal += itemPrice;
   // Update the text content of the order total element with the new total
 }
 
