@@ -28,11 +28,14 @@ function displayMenuItems(menu) {
     // Set the text content of the list item element to the item name
     itemName.textContent = items;
     // Append a list of items element to the menu container
-    // Append the list item to the list of items
     menuSection.appendChild(itemName);
   });
-
+  // Append the list item to the list of items
+  let itemList = itemName;
   // Attach a click event listener to the list item to add it to the order
+  itemList.addEventListener("click", () => {
+    addToOrder(itemName);
+  });
 }
 
 // Callback function for adding an item to the order
