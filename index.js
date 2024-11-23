@@ -15,27 +15,24 @@ function displayMenuItems(menu) {
   Object.keys(menu).forEach((headings) => {
     // Create an element to represent the category
     let heading = document.createElement("h3");
+    // Set the text content of the category element to the category name
     heading.innerHTML = headings;
+    // Append the category element to the menu container
     menuSection.appendChild(heading);
   });
-
-  // Set the text content of the category element to the category name
-
-  // Append the category element to the menu container
-
-  // Create an element to represent a list of items
-
-  // Append a list of items element to the menu container
-
   // Loop through the items in the category and create list items
-
-  // Create a list item element
-
-  // Set the text content of the list item element to the item name
+  menu[headings].forEach((items) => {
+    // Create an element to represent a list of items
+    // Create a list item element
+    list = document.createElement("li");
+    // Set the text content of the list item element to the item name
+    itemName.textContent = items;
+    // Append a list of items element to the menu container
+    // Append the list item to the list of items
+    menuSection.appendChild(itemName);
+  });
 
   // Attach a click event listener to the list item to add it to the order
-
-  // Append the list item to the list of items
 }
 
 // Callback function for adding an item to the order
