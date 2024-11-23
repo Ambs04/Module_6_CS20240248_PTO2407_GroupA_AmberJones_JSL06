@@ -5,8 +5,6 @@ const menu = {
   Desserts: ["Tiramisu", "Cheesecake"],
 };
 
-displayMenuItems(menu);
-
 // Function to display menu items by category
 function displayMenuItems(menu) {
   // Get the menu container element from the HTML
@@ -20,7 +18,7 @@ function displayMenuItems(menu) {
     // Append the category element to the menu container
     menuSection.appendChild(heading);
     // Loop through the items in the category and create list items
-    menu[headings].forEach((items) => {
+    Object.values(menu).forEach((items) => {
       // Create an element to represent a list of items
       list = document.createElement("ul");
       // Create a list item element
