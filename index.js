@@ -23,18 +23,21 @@ function displayMenuItems(menu) {
   // Loop through the items in the category and create list items
   menu[headings].forEach((items) => {
     // Create an element to represent a list of items
+
+    list = document.createElement("ul");
     // Create a list item element
-    list = document.createElement("li");
+    let itemName = document.createElement("li");
     // Set the text content of the list item element to the item name
     itemName.textContent = items;
     // Append a list of items element to the menu container
     menuSection.appendChild(itemName);
-  });
-  // Append the list item to the list of items
-  let itemList = itemName;
-  // Attach a click event listener to the list item to add it to the order
-  itemList.addEventListener("click", () => {
-    addToOrder(itemName);
+
+    // Append the list item to the list of items
+    let itemList = itemName;
+    // Attach a click event listener to the list item to add it to the order
+    itemList.addEventListener("click", () => {
+      addToOrder(itemName);
+    });
   });
 }
 
