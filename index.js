@@ -18,7 +18,7 @@ function displayMenuItems(menu) {
     // Append the category element to the menu container
     menuSection.appendChild(heading);
     // Loop through the items in the category and create list items
-    Object.values(menu).forEach((items) => {
+    menu[headings].forEach((items) => {
       // Create an element to represent a list of items
       list = document.createElement("ul");
       // Create a list item element
